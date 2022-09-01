@@ -11,7 +11,7 @@ public class Report {
     private static final ThreadLocal<ExtentTest> parentTest = new ThreadLocal<>();
     private static final ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
-    public static void creatTest(String testName, ReportType type){
+    public static void createTest(String testName, ReportType type){
         if(type.equals(ReportType.SINGLE)){
             ExtentTest extentTest = extent.createTest(testName);
             test.set(extentTest);
