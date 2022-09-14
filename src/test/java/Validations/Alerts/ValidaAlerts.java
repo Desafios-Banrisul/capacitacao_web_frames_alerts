@@ -34,9 +34,9 @@ public class ValidaAlerts {
             waits.loadElement(alertsPage.getResultText());
             String result = alertsPage.getResultText().getText();
             Assertions.assertEquals(result, "You successfully clicked an alert");
-            Report.log(Status.PASS, "Clicou no OK do PopUp : " + result, Screenshot.capture(driver));
+            Report.log(Status.PASS, "Clicou no OK do PopUp : " + result, Screenshot.captureBase64(driver));
         } catch (Exception e) {
-            Report.log(Status.FAIL, "Não Clicou no OK do PopUp" + e.getMessage(), Screenshot.capture(driver));
+            Report.log(Status.FAIL, "Não Clicou no OK do PopUp" + e.getMessage(), Screenshot.captureBase64(driver));
         }
     }
 }
